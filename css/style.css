@@ -1,0 +1,25 @@
+
+.table {
+    width: 100%;
+    margin-bottom: .6rem;
+    color: #212529;
+}
+a.seat {
+    display: table;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #888;
+}
+a.seat span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 5px 10px 5px;
+}
+a.seat-selected {
+    color: white
+}
+a.seat-selected span{
+    background: #1E90FF;
+}
