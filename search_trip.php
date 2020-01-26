@@ -135,8 +135,8 @@ while ($city_row = mysqli_fetch_assoc($result_city))
         while ($search_row = mysqli_fetch_assoc($result_search)):
             $departure_date_time = new DateTime($departureDate.' '.$search_row['departure_time']);
             $arrival_date_time = new DateTime($departureDate.' '.$search_row['arrival_time']);
-            $departure_time_am_pm = $departure_date_time->format('h:i A');
-            $arrival_time_am_pm = $arrival_date_time->format('h:i A');
+            $departure_time_am_pm = $departure_date_time->format('M d, h:i A');
+            $arrival_time_am_pm = $arrival_date_time->format('M d, h:i A');
             $duration = $arrival_date_time->diff($departure_date_time)->format('%h');
         ?>
         <div class="col-md-12" style="margin-bottom: 2%;">
@@ -146,8 +146,8 @@ while ($city_row = mysqli_fetch_assoc($result_city))
                         <div class="col-md-6">
                             <h5 class="card-title"><?php echo $departure_time_am_pm ?> - <?php echo $search_row['type'] ?></h5>
                             <p class="card-text font-italic"><?php echo $search_row['route_city_detail'] ?></p>
-                            <p class="card-text font-weight-light">Departs: <span class="text-primary font-italic">Jan 28, <?php echo $departure_time_am_pm ?></span></p>
-                            <p class="card-text font-weight-light">Arrives: <span class="text-primary font-italic">Jan 28, <?php echo $arrival_time_am_pm ?></span>   Duration: <?php echo $duration?> Hours</p>
+                            <p class="card-text font-weight-light">Departs: <span class="text-primary font-italic"><?php echo $departure_time_am_pm ?></span></p>
+                            <p class="card-text font-weight-light">Arrives: <span class="text-primary font-italic"><?php echo $arrival_time_am_pm ?></span>   Duration: <?php echo $duration?> Hours</p>
 
                         </div>
                         <div class="col-md-6">
@@ -159,7 +159,7 @@ while ($city_row = mysqli_fetch_assoc($result_city))
                                     <h5 class="card-title text-danger"><?php echo $search_row['price']*$no_of_seat ?> MMK</h5>
                                     <div class="card-text text-danger"><?php echo $no_of_seat ?> Seat x <?php echo $search_row['price'] ?> MMK</div>
                                     <br>
-                                    <a href="seat_list.php?s_id=<?php echo $search_row['s_id'] ?>" class="btn btn-primary">Select Seat</a>
+                                    <a href="seat_list.php?s_id=<?php echo $search_row['s_id'] ?>&no_of_seat=<?php echo $no_of_seat?>&departureDate=<?php echo $departureDate?>" class="btn btn-primary">Select Seat</a>
                                 </div>
                             </div>
 

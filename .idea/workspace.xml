@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="" />
+    <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/adminlte.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/adminlte.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/adminlte.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/adminlte.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/adminlte.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/adminlte.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/adminlte.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/adminlte.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/dashboard2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/dashboard3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket_seat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/seat_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/seat_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_trip.php" beforeDir="false" afterPath="$PROJECT_DIR$/search_trip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seat_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/seat_list.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +66,16 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpServers">
     <servers>
       <server host="kyaw" id="ff1e4636-2748-44d1-bf85-09712dcc14bc" name="Hello" />
@@ -38,14 +88,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\http_ticket\css" />
+      <recent name="D:\xampp\htdocs\http_ticket\js" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="js.build_tools.grunt">
@@ -75,6 +133,8 @@
       <updated>1579928115018</updated>
       <workItem from="1579928121314" duration="15209000" />
       <workItem from="1579954846420" duration="1644000" />
+      <workItem from="1579957599727" duration="7953000" />
+      <workItem from="1579971861128" duration="5394000" />
     </task>
     <servers />
   </component>
@@ -94,10 +154,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1579956005495" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1579941447944">
+    <state x="560" y="319" key="NewPhpFileDialog" timestamp="1580005190749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579941447944" />
+    <state x="560" y="319" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1580005190749" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1579970927713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579970927713" />
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579928122103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

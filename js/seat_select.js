@@ -31,6 +31,7 @@ $(document).ready(function(){
             $('#seatSelectionSubmitButton').prop('disabled', true);
         } else {
             $('#seatSelectionSubmitButton').prop('disabled', false);
+
         }
     });
 });
