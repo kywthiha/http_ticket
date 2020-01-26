@@ -2,45 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/adminlte.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/adminlte.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/adminlte.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/adminlte.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.components.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.core.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.extra-components.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.pages.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/alt/adminlte.plugins.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminlte.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminlte.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminlte.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminlte.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/pages/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/pages/dashboard2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/pages/dashboard3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticket_seat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/traveller_booking.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/seat_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/seat_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_trip.php" beforeDir="false" afterPath="$PROJECT_DIR$/search_trip.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seat_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/seat_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket_seat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ticket_seat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -97,7 +71,7 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -134,12 +108,27 @@
       <workItem from="1579928121314" duration="15209000" />
       <workItem from="1579954846420" duration="1644000" />
       <workItem from="1579957599727" duration="7953000" />
-      <workItem from="1579971861128" duration="5394000" />
+      <workItem from="1579971861128" duration="15551000" />
+      <workItem from="1580024065059" duration="9568000" />
+      <workItem from="1580043114151" duration="13828000" />
     </task>
+    <task id="LOCAL-00001" summary="Seat list Ok">
+      <created>1580005337789</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580005337789</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Seat list Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seat list Ok" />
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="0" key="#PHP" timestamp="1579955886359">
@@ -154,14 +143,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1579956005495" />
-    <state x="560" y="319" key="NewPhpFileDialog" timestamp="1580005190749">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580005336226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="560" y="319" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1580005190749" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1579970927713">
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580005336226" />
+    <state x="560" y="319" key="NewPhpFileDialog" timestamp="1580060392974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579970927713" />
+    <state x="560" y="319" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1580060392974" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1580043468912">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580043468912" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580005346537">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580005346537" />
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579928122103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

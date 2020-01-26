@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Seat List</title>
-</head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom box-shadow">
-    <a class="navbar-brand font-weight-bold" href="#">HTTP Bus Ticket</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php
+$title = "Seat LIst";
+require_once "header.php";
+?>
 <div class="container" style="margin-top: 2%;">
     <div class="row justify-content-center">
         <?php
@@ -36,17 +11,23 @@
         $s_id = $_GET['s_id'];
         $no_of_seat = $_GET['no_of_seat'];
         $departureDate = $_GET['departureDate'];
+        $departure_date_time = new DateTime();
         if (!($s_id && $no_of_seat && $departureDate)){
             die("Invalid Request");
         }
         if ($no_of_seat > 5)
             die("Maximum num of seat 5");
+        try {
+            $departure_date_time = new DateTime($departureDate);
+        } catch (Exception $e) {
+            die("Date Invalid");
+        }
+        $user_data = array("s_id"=>$s_id, "no_of_seat"=>$no_of_seat, "departureDate"=>$departureDate);
+        session_start();
+        $_SESSION['user_data_http_love'] = $user_data;
         $no_of_seat_list = 0;
-        $query_tickets = "SELECT * FROM ticket WHERE schedule_id=$s_id";
-        $result_tickets = mysqli_query($conn, $query_tickets);
         $result = mysqli_query($conn, "SELECT * FROM schedule INNER JOIN route ON route.r_id = schedule.route_id INNER JOIN bus ON bus.bus_id = schedule.bus_id INNER JOIN bus_operator ON bus_operator.bus_operator_id = bus.bus_operator_id WHERE s_id = '$s_id'");
         $row = mysqli_fetch_assoc($result);
-        $departure_date_time = new DateTime();
         try {
             $departure_date_time = new DateTime($departureDate.' '.$row['departure_time']);
         } catch (Exception $e) {
@@ -60,10 +41,22 @@
         $no_of_seat_list = $row['no_of_seat'];
         $departure_time_am_pm = $departure_date_time->format('M d, h:i A');
         $arrival_time_am_pm = $arrival_date_time->format('M d, h:i A');
+        $row['departure_time'] = $departure_time_am_pm;
+        $row['arrival_time'] = $arrival_time_am_pm;
+        $_SESSION['ticket_data_http_love'] = $row;
+        mysqli_query($conn, "DELETE FROM booking WHERE status = 0 and staff_id IS NULL and create_date_time < (NOW() - INTERVAL 10 MINUTE)");
+        $query_tickets = "SELECT * FROM ticket 
+LEFT JOIN booking_detail
+ON ticket.t_id = booking_detail.ticket_id AND booking_detail.departure_date= '$departureDate'
+LEFT JOIN booking ON booking.booking_id = booking_detail.booking_id
+LEFT JOIN traveller ON booking.traveller_id = traveller.traveller_id
+LEFT JOIN traveller_gender ON traveller_gender.g_id = traveller.gender_id
+WHERE schedule_id='$s_id'";
+        $result_tickets = mysqli_query($conn, $query_tickets);
         ?>
         <div class="col-md-10">
             <div class="card text-white bg-primary mb-3 text-center">
-                  <div class="card-header h3">Departure Date: <?php echo $departureDate?></div>
+                <div class="card-header h5"><?php echo $arrival_time_am_pm?></div>
             </div>
         </div>
         <div class="col-md-5" style="margin-bottom: 1%;">
@@ -75,6 +68,7 @@
                     <table class="table table-seat-plan" id="seat-table" data-max-seats="<?php echo $no_of_seat ?>">
                         <?php
                         while($row_tickets = mysqli_fetch_assoc($result_tickets)):
+
                             ?>
                             <tr>
                                 <?php
@@ -86,9 +80,28 @@
                                         <td>
                                         </td>
                                     <?php else:?>
-                                        <td><a href="#" class="seat seat-available btn" data-seat-id="<?php echo $row_tickets['t_id'] ?>"
-                                               data-seat-number="<?php echo $row_tickets['seat_no'] ?>"><span><?php echo $row_tickets['seat_no'] ?></span></a>
+                                        <?php  if($row_tickets['traveller_id']):?>
+                                        <td><a href="#" class="seat seat-unavailable btn disabled btn-danger" aria-disabled="true" data-seat-id="<?php echo $row_tickets['t_id'] ?>"
+                                               data-seat-number="<?php echo $row_tickets['seat_no'] ?>"><span>
+                                                    <?php if($row_tickets['g_id'] == 1 || $row_tickets['g_id'] == 3):?>
+                                                    <i class="fa fa-male"></i>
+                                                    <?php elseif ($row_tickets['g_id'] == 2 || $row_tickets['g_id'] == 4):?>
+                                                        <i class="fa fa-female"></i>
+                                                    <?php elseif ($row_tickets['g_id'] == 5):?>
+                                                        <i class="fa fa-users"></i>
+                                                    <?php endif;?>
+                                                </span></a>
                                         </td>
+                                        <?php  elseif($row_tickets['departure_date']):?>
+                                            <td><a href="#" class="seat seat-unavailable btn disabled btn-danger" aria-disabled="true" data-seat-id="<?php echo $row_tickets['t_id'] ?>"
+                                                   data-seat-number="<?php echo $row_tickets['seat_no'] ?>"><span><i class="fa fa-lock"></i></span></a>
+                                            </td>
+                                        <?php else:?>
+                                            <td><a href="#" class="seat seat-available btn" data-seat-id="<?php echo $row_tickets['t_id'] ?>"
+                                                   data-seat-number="<?php echo $row_tickets['seat_no'] ?>"><span><?php echo $row_tickets['seat_no'] ?></span></a>
+                                            </td>
+
+                                        <?php endif;?>
                                     <?php
                                         $row_tickets = mysqli_fetch_assoc($result_tickets);
                                     endif;?>
@@ -140,7 +153,7 @@
                         </tbody>
                     </table>
                     <div class="card-text text-center">
-                        <form action="index.php" method="get">
+                        <form action="ticket_seat.php" method="get">
                             <input type="hidden" name="ticket_id" value="" id="seatIDs">
                             <h5>Please select <?php if($no_of_seat>1) echo $no_of_seat.' Seats'; else echo $no_of_seat.' Seat';?>
                                 <h1 id="selectedSeatNumbers" class="text-primary text-center">0</h1>
@@ -154,9 +167,6 @@
 
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="js/seat_select.js"></script>
-</body>
-</html>
+<?php
+require_once "footer.php";
+?>
