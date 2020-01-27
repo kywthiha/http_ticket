@@ -3,6 +3,7 @@
     <?php
     require_once('../configs/auth.php');
     require_once("../configs/config.php");
+    require_once "../auth/standard_check_role.php";
     $result = mysqli_query($conn, "SELECT * FROM bus_operator");
     ?>
     <?php
@@ -23,7 +24,7 @@
                        <div class="form-group">
                            <label for="bus_operator_name">Bus Operator Name:</label>
                            <select class="form-control selectpicker" id="bus_operator_name" data-live-search="true"
-                                   title="Select a location" name="destination_id" required>
+                                   title="Select a operator" name="bus_operator_id" required>
                                <?php while($row = mysqli_fetch_assoc($result)): ?>
                                    <option data-tokens="<?php echo $row['bus_operator_name'] ?>"
                                            value="<?php echo $row['bus_operator_id'] ?>"><?php echo $row['bus_operator_name'] ?></option>

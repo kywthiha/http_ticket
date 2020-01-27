@@ -2,69 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/city/show_name.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/adminlte.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/adminlte.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/adminlte.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/adminlte.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.components.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.components.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.components.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.core.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.core.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.core.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.extra-components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.extra-components.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.extra-components.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.extra-components.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.pages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.pages.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.pages.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.pages.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.plugins.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.plugins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/alt/adminlte.plugins.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/adminlte.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/adminlte.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/adminlte.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/adminlte.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/pages/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/pages/dashboard2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/pages/dashboard3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/seat_select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/bus_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/auth/admin_check_role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/auth/log_out.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/auth/password_change.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/auth/standard_check_role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/booking/booking_getall.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/booking/booking_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/role_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/setting/account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/setting/staff_add.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/setting/staff_delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/setting/staff_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/setting/staff_new.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/auth/log_out.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/auth/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/auth/staff_role_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/booking_getall.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/booking_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/booking_list_5hours.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/search_trip.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/seat_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/select_schedule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/staff_booking_success.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/ticket_seat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/travel_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/traveller_booking.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus/bus_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus/bus_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus/bus_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus/bus_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus/bus_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus/bus_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus/bus_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_operator/bus_operator_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_operator/bus_operator_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_route/route_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_route/route_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_route/route_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_route/route_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_route/route_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_route/route_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_route/route_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_route/route_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/bus_route/route_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/bus_route/route_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/bus_route/route_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/city/city_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/city/city_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/city/city_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/city/city_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/city/city_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/city/city_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/city/city_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/configs/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/configs/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/configs/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/configs/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/schedule/schedule_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/schedule/schedule_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_table.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_trip.php" beforeDir="false" afterPath="$PROJECT_DIR$/search_trip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seat_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/seat_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/http_ticket.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/http_ticket.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket_seat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ticket_seat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/travel_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveller_booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/traveller_booking.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +132,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/staff/auth" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -126,11 +140,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\http_ticket\staff\auth" />
+      <recent name="D:\xampp\htdocs\http_ticket\staff" />
+      <recent name="D:\xampp\htdocs\http_ticket\admin\auth" />
       <recent name="D:\xampp\htdocs\http_ticket\admin\css" />
       <recent name="D:\xampp\htdocs\http_ticket\admin" />
-      <recent name="D:\xampp\htdocs\http_ticket\css" />
-      <recent name="D:\xampp\htdocs\http_ticket\image" />
-      <recent name="D:\xampp\htdocs\http_ticket\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,7 +180,9 @@
       <workItem from="1580024065059" duration="9568000" />
       <workItem from="1580043114151" duration="29923000" />
       <workItem from="1580087578333" duration="3978000" />
-      <workItem from="1580097188614" duration="9881000" />
+      <workItem from="1580097188614" duration="10181000" />
+      <workItem from="1580118288095" duration="6984000" />
+      <workItem from="1580130018057" duration="30202000" />
     </task>
     <task id="LOCAL-00001" summary="Seat list Ok">
       <created>1580005337789</created>
@@ -182,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580060758974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ADMIN UI half success">
+      <created>1580108029936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580108029936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +215,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Seat list Ok" />
     <MESSAGE value="Insert Traveller Info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert Traveller Info" />
+    <MESSAGE value="ADMIN UI half success" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADMIN UI half success" />
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="0" key="#PHP" timestamp="1579955886359">
@@ -207,37 +231,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1579956005495" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580060757284">
+    <state x="436" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580151707948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580060757284" />
+    <state x="436" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580151707948" />
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580108026032">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580108026032" />
     <state x="554" y="182" key="NewPhpClassDialog" timestamp="1580062253856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="554" y="182" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1580062253856" />
-    <state x="560" y="319" key="NewPhpFileDialog" timestamp="1580076128622">
+    <state x="560" y="319" key="NewPhpFileDialog" timestamp="1580159734313">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="560" y="319" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1580076128622" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1580043468912">
+    <state x="560" y="319" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1580159734313" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1580130140809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580043468912" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580060767578">
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580130140809" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580108037125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580060767578" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580108037125" />
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579928122103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579928122103" />
+    <state x="0" y="0" width="786" height="824" key="find.popup" timestamp="1580153396269">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="786" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1580153396269" />
     <state x="341" y="183" key="run.anything.popup" timestamp="1579928605147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="341" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579928605147" />
-    <state x="347" y="-1" key="search.everywhere.popup" timestamp="1580066625698">
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1580123207915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="347" y="-1" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580066625698" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580123207915" />
   </component>
 </project>

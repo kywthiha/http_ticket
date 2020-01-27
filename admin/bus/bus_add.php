@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once('../configs/config.php');
+require_once "../auth/standard_check_role.php";
 $bus_operator_id = $_POST['bus_operator_id'];
 $no_of_seat = $_POST['no_of_seat'];
 $bus_type = $_POST['bus_type'];

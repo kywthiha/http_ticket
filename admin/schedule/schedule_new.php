@@ -1,6 +1,7 @@
 <?php
     require_once('../configs/auth.php');
     require_once("../configs/config.php");
+    require_once "../auth/standard_check_role.php";
     $bus_result = mysqli_query($conn, "SELECT * FROM bus INNER JOIN bus_operator ON bus_operator.bus_operator_id = bus.bus_operator_id");
     $route_result = mysqli_query($conn, "SELECT * FROM route");
     ?>

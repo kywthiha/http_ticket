@@ -43,8 +43,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
-            <img src="https://img.icons8.com/bubbles/50/000000/bus.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <a href="/http_ticket/admin/setting/account.php" class="brand-link">
+            <img src="https://img.icons8.com/bubbles/50/000000/bus.png" alt="Admin" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Admin</span>
         </a>
@@ -59,6 +59,14 @@
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/http_ticket/admin/booking/booking_list.php" class="nav-link">
+                        <i class="nav-icon fa fa-bus"></i>
+                        <p>
+                            Booking
                         </p>
                     </a>
                 </li>
@@ -100,6 +108,34 @@
                         <i class="nav-icon fa fa-bus"></i>
                         <p>
                             Route
+                        </p>
+                    </a>
+                </li>
+                <?php
+                function getAdmin()
+                {
+                    if (isset($_SESSION['auth'], $_SESSION['staff'])) {
+                        return $_SESSION['staff']['role'];
+                    }else{
+                        die("Un authorise access");
+                    }
+                }
+                if(getAdmin() == "admin"):
+                ?>
+                <li class="nav-item">
+                    <a href="/http_ticket/admin/setting/staff_list.php" class="nav-link">
+                        <i class="nav-icon fa fa-bus"></i>
+                        <p>
+                            Staff
+                        </p>
+                    </a>
+                </li>
+                <?php endif; ?>
+                <li class="nav-item">
+                    <a href="/http_ticket/admin/auth/log_out.php" class="nav-link">
+                        <i class="nav-icon fa fa-bus"></i>
+                        <p>
+                            Log Out
                         </p>
                     </a>
                 </li>

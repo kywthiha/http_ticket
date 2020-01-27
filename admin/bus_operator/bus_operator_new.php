@@ -1,6 +1,7 @@
 
 <?php
 require_once('../configs/auth.php');
+require_once "../auth/standard_check_role.php";
 ?>
 <?php
 $title = "New Bus Operator";

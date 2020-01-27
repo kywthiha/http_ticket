@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['ticket_ids_http_love'],$_SESSION['booking_id'])) {
+if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['ticket_ids_http_love'],$_SESSION['booking_id'],$_SESSION['payment_info_http_love'])) {
     die('unauthorized access');
 }
 if (!isset($_GET['traveller_name'],$_GET['traveller_gender'],$_GET['traveller_email'],$_GET['phone_no'])){
@@ -23,7 +23,7 @@ if(mysqli_query($conn, $sql_traveller)){
         $_SESSION['booking_status'] = 1;
         $_SESSION['traveller_id'] = $traveller_id;
         unset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['ticket_ids_http_love']);
-        header("location:payment.php");
+        header("location:payment_info.php");
     }
     else{
         $_SESSION['booking_status'] = 0;

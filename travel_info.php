@@ -7,7 +7,7 @@ require_once "header.php";
         <?php
         require_once("admin/configs/config.php");
         session_start();
-        if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['ticket_ids_http_love'],$_SESSION['booking_id'])) {
+        if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['ticket_ids_http_love'],$_SESSION['booking_id'],$_SESSION['payment_info_http_love'])) {
             die('unauthorized access');
         }
         if (isset($_SESSION['booking_status'])){

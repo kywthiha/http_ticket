@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once("../configs/config.php");
+require_once "../auth/standard_check_role.php";
 $result = mysqli_query($conn, "SELECT * FROM bus_operator");
 ?>
 <?php

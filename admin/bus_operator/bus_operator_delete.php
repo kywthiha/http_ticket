@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once('../configs/config.php');
+require_once "../auth/standard_check_role.php";
 $bus_operator_id = $_GET['bus_operator_id'];
 $sql = "DELETE FROM bus_operator WHERE bus_operator_id = $bus_operator_id ";
 mysqli_query($conn, $sql);

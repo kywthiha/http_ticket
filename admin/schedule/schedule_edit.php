@@ -1,6 +1,7 @@
     <?php
     require_once('../configs/auth.php');
     require_once("../configs/config.php");
+    require_once "../auth/standard_check_role.php";
     $s_id = $_GET['s_id'];
     $result_schedule = mysqli_query($conn, "SELECT * FROM schedule WHERE s_id = '$s_id'");
     $row_schedule = mysqli_fetch_assoc($result_schedule);

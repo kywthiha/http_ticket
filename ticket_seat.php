@@ -3,7 +3,7 @@
     require_once  "header.php";
     require_once("admin/configs/config.php");
     session_start();
-    if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'])) {
+    if (!isset($_SESSION['user_data_http_love'],$_SESSION['ticket_data_http_love'],$_SESSION['payment_info_http_love'])) {
         die('unauthorized access');
     }
     $s_user_detail = $_SESSION['user_data_http_love'];

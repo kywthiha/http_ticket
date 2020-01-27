@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once("../configs/config.php");
+require_once "../auth/standard_check_role.php";
 $sql = "SELECT route.*,GROUP_CONCAT(city.c_name ORDER BY route_detail.location SEPARATOR '-') AS city_name FROM route INNER JOIN route_detail ON route_detail.route_id = route.r_id INNER JOIN city ON city.c_id = route_detail.city_id GROUP BY route.r_id";
 $result = mysqli_query($conn, $sql);
 ?>

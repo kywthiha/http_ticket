@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once('../configs/config.php');
+require_once "../auth/standard_check_role.php";
 $c_id = $_POST['c_id'];
 $c_name = $_POST['c_name'];
 $sql = "UPDATE city SET c_name = '$c_name' WHERE c_id = '$c_id' ";

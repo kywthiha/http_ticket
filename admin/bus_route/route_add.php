@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once('../configs/config.php');
+require_once "../auth/standard_check_role.php";
 $locations = array();
 $route_title = $_POST['route_title'];
 $latest_id = 0;

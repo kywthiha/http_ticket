@@ -14,7 +14,7 @@ ON A.route_id = route_detail.route_id AND A.location < route_detail.location AND
 INNER JOIN route ON route.r_id = route_detail.route_id
 INNER JOIN schedule ON schedule.route_id = route.r_id
 INNER JOIN bus ON bus.bus_id = schedule.bus_id
-INNER JOIN bus_operator ON bus_operator.bus_operator_id = bus.bus_id
+INNER JOIN bus_operator ON bus_operator.bus_operator_id = bus.bus_operator_id
 INNER JOIN route_detail AS rd ON rd.route_id = route_detail.route_id
 INNER JOIN city ON city.c_id = rd.city_id
 GROUP BY schedule.s_id

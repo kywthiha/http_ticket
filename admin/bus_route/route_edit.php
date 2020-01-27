@@ -1,6 +1,7 @@
 <?php
 require_once('../configs/auth.php');
 require_once("../configs/config.php");
+require_once "../auth/standard_check_role.php";
 $sql_route = "SELECT * FROM route WHERE route.r_id =3 ";
 $route_result = mysqli_query($conn, $sql_route);
 $route_row = mysqli_fetch_assoc($route_result);

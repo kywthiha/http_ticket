@@ -2,6 +2,7 @@
     <?php
     require_once('../configs/auth.php');
     require_once("../configs/config.php");
+    require_once "../auth/standard_check_role.php";
     $bus_id = $_GET['bus_id'];
     $result_bus = mysqli_query($conn, "SELECT * FROM bus WHERE bus_id = '$bus_id'");
     $row_bus = mysqli_fetch_assoc($result_bus);
