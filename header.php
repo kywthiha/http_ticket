@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/bus.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet"
@@ -18,7 +19,9 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom box-shadow">
-    <a class="navbar-brand font-weight-bold" href="#">HTTP Bus Ticket</a>
+    <a class="navbar-brand font-weight-bold" href="#">
+        <img src="https://img.icons8.com/bubbles/50/000000/bus.png"  width="30" height="30" alt="">
+        HTTP Bus Ticket</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,7 +32,7 @@
                 <a class="nav-link" href="/http_ticket">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="/http_ticket/about.php">About</a>
             </li>
         </ul>
     </div>

@@ -1,4 +1,5 @@
 <?php
+$title = "Payment";
 require_once "header.php";
 ?>
 

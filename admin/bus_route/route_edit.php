@@ -1,7 +1,3 @@
-<?php 
-$title = "New Route";
-include('../header.php');
-?>
 <?php
 require_once('../configs/auth.php');
 require_once("../configs/config.php");
@@ -18,6 +14,10 @@ $city_result = mysqli_query($conn, "SELECT * FROM city");
 $city_list = array();
 while($row_city = mysqli_fetch_assoc($city_result))
     array_push($city_list,$row_city);
+?>
+<?php
+$title = "New Route";
+include('../header.php');
 ?>
 <h1>New Route</h1>
 <form action="route_add.php" method="post">
