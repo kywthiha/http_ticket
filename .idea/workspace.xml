@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/http_ticket.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/http_ticket.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/booking_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/booking_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/configs/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/configs/config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +112,7 @@
       <workItem from="1580174748708" duration="2548000" />
       <workItem from="1580264675736" duration="97000" />
       <workItem from="1580268540609" duration="1251000" />
+      <workItem from="1580399096648" duration="1408000" />
     </task>
     <task id="LOCAL-00001" summary="Seat list Ok">
       <created>1580005337789</created>
@@ -145,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580162542455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Project Show Ready State Not Complete">
+      <created>1580399164394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580399164394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +161,8 @@
     <MESSAGE value="Insert Traveller Info" />
     <MESSAGE value="ADMIN UI half success" />
     <MESSAGE value="staff update" />
-    <option name="LAST_COMMIT_MESSAGE" value="staff update" />
+    <MESSAGE value="Project Show Ready State Not Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Show Ready State Not Complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="0" key="#PHP" timestamp="1579955886359">
@@ -176,10 +181,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580151707948" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580162536520">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580399162032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580162536520" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580399162032" />
     <state x="554" y="182" key="NewPhpClassDialog" timestamp="1580062253856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -192,10 +197,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580130140809" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580162772813">
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580399170480">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580162772813" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580399170480" />
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579928122103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

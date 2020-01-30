@@ -1,8 +1,8 @@
 <?php
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "http_ticket";
+$dbhost = "remotemysql.com";
+$dbuser = "raIOA7PwdR";
+$dbpass = "BK0YqyR7n4";
+$dbname = "raIOA7PwdR";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (!$conn) {
     die("Connection failed: " );
