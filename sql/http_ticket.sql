@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2020 at 01:03 PM
--- Server version: 10.1.40-MariaDB
--- PHP Version: 7.3.5
+-- Generation Time: Jan 29, 2020 at 03:10 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `booking` (
-  `booking_id` bigint(20) NOT NULL,
-  `departure_date` date NOT NULL,
-  `traveller_id` bigint(20) DEFAULT NULL,
-  `staff_id` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  `create_date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                           `booking_id` bigint(20) NOT NULL,
+                           `departure_date` date NOT NULL,
+                           `traveller_id` bigint(20) DEFAULT NULL,
+                           `staff_id` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
+                           `status` tinyint(1) NOT NULL DEFAULT '0',
+                           `create_date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -44,7 +44,18 @@ CREATE TABLE `booking` (
 INSERT INTO `booking` (`booking_id`, `departure_date`, `traveller_id`, `staff_id`, `status`, `create_date_time`) VALUES
 (7, '2020-01-29', 31, NULL, 1, '2020-01-27 11:09:58'),
 (8, '2020-01-29', 32, NULL, 1, '2020-01-27 11:16:55'),
-(9, '2020-01-29', 33, NULL, 1, '2020-01-27 11:19:54');
+(9, '2020-01-29', 33, NULL, 1, '2020-01-27 11:19:54'),
+(10, '2020-01-29', 34, '7', 1, '2020-01-27 20:07:00'),
+(11, '2020-01-29', 35, NULL, 1, '2020-01-27 20:38:58'),
+(12, '2020-01-29', 36, '7', 1, '2020-01-28 04:01:34'),
+(13, '2020-01-29', 37, NULL, 1, '2020-01-28 12:11:13'),
+(14, '2020-01-29', 38, NULL, 1, '2020-01-28 12:20:08'),
+(15, '2020-01-29', 39, NULL, 1, '2020-01-28 12:23:27'),
+(17, '2020-01-29', 40, NULL, 1, '2020-01-28 13:48:29'),
+(18, '2020-01-29', 41, NULL, 1, '2020-01-28 13:56:00'),
+(19, '2020-01-29', 42, '17', 1, '2020-01-28 15:24:53'),
+(20, '2020-01-29', NULL, NULL, 0, '2020-01-28 15:46:56'),
+(21, '2020-01-29', 43, NULL, 1, '2020-01-28 15:50:20');
 
 -- --------------------------------------------------------
 
@@ -53,10 +64,10 @@ INSERT INTO `booking` (`booking_id`, `departure_date`, `traveller_id`, `staff_id
 --
 
 CREATE TABLE `booking_detail` (
-  `bd_id` bigint(20) NOT NULL,
-  `ticket_id` bigint(5) NOT NULL,
-  `booking_id` bigint(5) NOT NULL,
-  `departure_date` date NOT NULL
+                                  `bd_id` bigint(20) NOT NULL,
+                                  `ticket_id` bigint(5) NOT NULL,
+                                  `booking_id` bigint(5) NOT NULL,
+                                  `departure_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -64,16 +75,20 @@ CREATE TABLE `booking_detail` (
 --
 
 INSERT INTO `booking_detail` (`bd_id`, `ticket_id`, `booking_id`, `departure_date`) VALUES
-(23, 51, 7, '2020-01-29'),
-(24, 46, 7, '2020-01-29'),
-(25, 45, 7, '2020-01-29'),
-(26, 40, 7, '2020-01-29'),
-(27, 192, 8, '2020-01-29'),
-(28, 191, 8, '2020-01-29'),
-(29, 196, 8, '2020-01-29'),
-(30, 186, 9, '2020-01-29'),
-(31, 185, 9, '2020-01-29'),
-(32, 184, 9, '2020-01-29');
+(1, 461, 19, '2020-01-29'),
+(2, 462, 19, '2020-01-29'),
+(3, 466, 19, '2020-01-29'),
+(4, 467, 19, '2020-01-29'),
+(5, 586, 20, '2020-01-29'),
+(6, 587, 20, '2020-01-29'),
+(7, 591, 20, '2020-01-29'),
+(8, 592, 20, '2020-01-29'),
+(9, 596, 20, '2020-01-29'),
+(10, 597, 21, '2020-01-29'),
+(11, 601, 21, '2020-01-29'),
+(12, 602, 21, '2020-01-29'),
+(13, 606, 21, '2020-01-29'),
+(14, 607, 21, '2020-01-29');
 
 -- --------------------------------------------------------
 
@@ -82,8 +97,8 @@ INSERT INTO `booking_detail` (`bd_id`, `ticket_id`, `booking_id`, `departure_dat
 --
 
 CREATE TABLE `booking_status` (
-  `bs_id` int(11) NOT NULL,
-  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+                                  `bs_id` int(11) NOT NULL,
+                                  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -93,10 +108,10 @@ CREATE TABLE `booking_status` (
 --
 
 CREATE TABLE `bus` (
-  `bus_id` bigint(20) NOT NULL,
-  `bus_operator_id` bigint(20) NOT NULL,
-  `no_of_seat` int(11) NOT NULL,
-  `type` enum('Standard','VIP') COLLATE utf8_unicode_ci NOT NULL
+                       `bus_id` bigint(20) NOT NULL,
+                       `bus_operator_id` bigint(20) NOT NULL,
+                       `no_of_seat` int(11) NOT NULL,
+                       `type` enum('Standard','VIP') COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -104,19 +119,17 @@ CREATE TABLE `bus` (
 --
 
 INSERT INTO `bus` (`bus_id`, `bus_operator_id`, `no_of_seat`, `type`) VALUES
-(4, 0, 33, 'Standard'),
-(6, 0, 52, 'VIP'),
-(7, 0, 12, 'VIP'),
-(8, 0, 32, 'VIP'),
-(10, 10, 32, 'Standard'),
-(11, 5, 44, 'Standard'),
-(12, 11, 32, 'Standard'),
-(13, 12, 24, 'Standard'),
-(14, 12, 44, 'VIP'),
-(15, 13, 16, 'Standard'),
-(16, 14, 48, 'Standard'),
-(17, 15, 20, 'Standard'),
-(18, 0, 28, 'Standard');
+(20, 5, 45, 'Standard'),
+(21, 7, 12, 'VIP'),
+(22, 6, 45, 'Standard'),
+(23, 8, 16, 'VIP'),
+(24, 9, 16, 'Standard'),
+(25, 10, 44, 'VIP'),
+(26, 11, 28, 'Standard'),
+(27, 12, 36, 'Standard'),
+(28, 13, 12, 'VIP'),
+(29, 14, 36, 'Standard'),
+(30, 15, 18, 'VIP');
 
 -- --------------------------------------------------------
 
@@ -125,10 +138,10 @@ INSERT INTO `bus` (`bus_id`, `bus_operator_id`, `no_of_seat`, `type`) VALUES
 --
 
 CREATE TABLE `bus_operator` (
-  `bus_operator_id` bigint(5) NOT NULL,
-  `bus_operator_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `phone_no` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+                                `bus_operator_id` bigint(5) NOT NULL,
+                                `bus_operator_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                                `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+                                `phone_no` varchar(20) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -156,8 +169,8 @@ INSERT INTO `bus_operator` (`bus_operator_id`, `bus_operator_name`, `email`, `ph
 --
 
 CREATE TABLE `city` (
-  `c_id` bigint(20) NOT NULL,
-  `c_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+                        `c_id` bigint(20) NOT NULL,
+                        `c_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -185,7 +198,12 @@ INSERT INTO `city` (`c_id`, `c_name`) VALUES
 (28, 'Magway'),
 (29, 'Kamma'),
 (30, 'Monywa'),
-(32, 'Kyauk Padaunk');
+(33, 'Kyauk Padaung'),
+(34, 'Meiktila'),
+(35, 'Kalaw'),
+(36, 'Sagaing'),
+(37, 'Myin Mu'),
+(38, 'Chaung U');
 
 -- --------------------------------------------------------
 
@@ -194,8 +212,8 @@ INSERT INTO `city` (`c_id`, `c_name`) VALUES
 --
 
 CREATE TABLE `route` (
-  `r_id` bigint(20) NOT NULL,
-  `title` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+                         `r_id` bigint(20) NOT NULL,
+                         `title` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -203,18 +221,18 @@ CREATE TABLE `route` (
 --
 
 INSERT INTO `route` (`r_id`, `title`) VALUES
-(13, 'Pakokku-Yangon'),
-(14, 'Mawgay - Mandalay'),
-(15, 'Yangon - Pakokku'),
-(16, 'Chauk-Magway'),
-(17, 'Mandalay-Momywa'),
-(18, 'Gangaw-Hakha'),
-(19, 'Bago-Aung Lan'),
-(20, 'Mandalay-Magway'),
-(21, 'Bagan-Yangon'),
-(22, 'Magway-Chauk'),
-(23, 'Hakha-Gangaw'),
-(24, 'Aung Lan-Bago');
+(27, 'Pakokku - Yangon'),
+(30, 'Yangon-Pakokku'),
+(31, 'Bago-Aung Lan'),
+(32, 'Aung Lan-Bago'),
+(33, 'Pakokku-Chauk'),
+(34, 'Chauk-Pakokku'),
+(36, 'Magway-Aung Pan'),
+(37, 'Aung Pan-Magway'),
+(38, 'Mandalay-Momywa'),
+(39, 'Monywa-Mandalay'),
+(40, 'Kamma-Bagan/Nyaung Oo'),
+(42, 'Bagan/Nyaung Oo-Kamma');
 
 -- --------------------------------------------------------
 
@@ -223,9 +241,9 @@ INSERT INTO `route` (`r_id`, `title`) VALUES
 --
 
 CREATE TABLE `route_detail` (
-  `route_id` bigint(20) NOT NULL,
-  `location` int(11) NOT NULL,
-  `city_id` bigint(20) NOT NULL
+                                `route_id` bigint(20) NOT NULL,
+                                `location` int(11) NOT NULL,
+                                `city_id` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -233,79 +251,45 @@ CREATE TABLE `route_detail` (
 --
 
 INSERT INTO `route_detail` (`route_id`, `location`, `city_id`) VALUES
-(3, 1, 4),
-(3, 2, 5),
-(3, 3, 7),
-(4, 1, 7),
-(4, 2, 5),
-(4, 3, 4),
-(5, 1, 4),
-(5, 2, 5),
-(5, 3, 7),
-(7, 1, 9),
-(7, 2, 7),
-(7, 3, 10),
-(7, 4, 8),
-(8, 1, 7),
-(8, 2, 10),
-(8, 3, 8),
-(9, 1, 7),
-(9, 2, 8),
-(9, 3, 10),
-(10, 1, 7),
-(10, 2, 8),
-(10, 3, 9),
-(10, 4, 10),
-(10, 5, 5),
-(11, 1, 7),
-(11, 2, 5),
-(12, 1, 7),
-(12, 2, 8),
-(12, 3, 5),
-(13, 1, 11),
-(13, 2, 13),
-(13, 3, 32),
-(13, 4, 12),
-(14, 1, 28),
-(14, 2, 27),
-(15, 1, 12),
-(15, 2, 32),
-(15, 3, 13),
-(15, 4, 11),
-(16, 1, 21),
-(16, 2, 29),
-(16, 3, 11),
-(16, 4, 28),
-(17, 1, 27),
-(17, 2, 30),
-(18, 1, 24),
-(18, 2, 29),
-(18, 3, 11),
-(18, 4, 28),
-(18, 5, 25),
-(19, 1, 17),
-(19, 2, 14),
-(20, 1, 27),
-(20, 2, 28),
-(21, 1, 13),
-(21, 2, 32),
-(21, 3, 12),
-(22, 1, 28),
-(22, 2, 11),
-(22, 3, 29),
-(22, 4, 21),
-(23, 1, 25),
-(23, 2, 12),
-(23, 3, 28),
-(23, 4, 11),
-(23, 5, 29),
-(23, 6, 24),
-(24, 1, 14),
-(24, 2, 17),
-(25, 1, 11),
-(25, 2, 27),
-(25, 3, 25),
-(25, 4, 13);
+(27, 1, 11),
+(27, 2, 13),
+(27, 4, 12),
+(30, 1, 12),
+(30, 2, 33),
+(30, 3, 13),
+(30, 4, 11),
+(31, 1, 17),
+(31, 2, 14),
+(32, 1, 14),
+(32, 2, 17),
+(33, 1, 11),
+(33, 2, 21),
+(34, 1, 21),
+(34, 2, 11),
+(36, 1, 28),
+(36, 2, 34),
+(36, 3, 35),
+(36, 4, 15),
+(37, 1, 15),
+(37, 2, 34),
+(37, 3, 35),
+(37, 4, 28),
+(38, 1, 27),
+(38, 2, 36),
+(38, 3, 37),
+(38, 4, 38),
+(38, 5, 30),
+(39, 1, 30),
+(39, 2, 38),
+(39, 3, 37),
+(39, 4, 36),
+(39, 5, 27),
+(40, 1, 29),
+(40, 2, 11),
+(40, 3, 13),
+(42, 1, 13),
+(42, 2, 11),
+(42, 3, 29);
 
 -- --------------------------------------------------------
 
@@ -314,12 +298,12 @@ INSERT INTO `route_detail` (`route_id`, `location`, `city_id`) VALUES
 --
 
 CREATE TABLE `schedule` (
-  `s_id` bigint(20) NOT NULL,
-  `route_id` bigint(20) NOT NULL,
-  `bus_id` bigint(20) NOT NULL,
-  `departure_time` time NOT NULL,
-  `arrival_time` time NOT NULL,
-  `price` double NOT NULL
+                            `s_id` bigint(20) NOT NULL,
+                            `route_id` bigint(20) NOT NULL,
+                            `bus_id` bigint(20) NOT NULL,
+                            `departure_time` time NOT NULL,
+                            `arrival_time` time NOT NULL,
+                            `price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -327,37 +311,50 @@ CREATE TABLE `schedule` (
 --
 
 INSERT INTO `schedule` (`s_id`, `route_id`, `bus_id`, `departure_time`, `arrival_time`, `price`) VALUES
-(2, 9, 5, '05:06:00', '07:06:00', 6666),
-(3, 9, 3, '15:03:00', '13:03:00', 2224),
-(7, 9, 3, '05:05:00', '17:05:00', 555),
-(12, 15, 8, '19:00:00', '06:00:00', 12000),
-(13, 15, 12, '09:00:00', '18:00:00', 12000),
-(14, 13, 6, '20:00:00', '07:30:00', 11000),
-(15, 14, 7, '06:00:00', '10:30:00', 5000),
-(16, 14, 15, '13:30:00', '17:00:00', 5000),
-(17, 14, 13, '20:30:00', '12:30:00', 5500),
-(18, 15, 11, '15:30:00', '02:00:00', 11000),
-(19, 14, 13, '02:22:00', '14:04:00', 12000);
+(24, 27, 20, '05:30:00', '18:30:00', 11000),
+(25, 27, 22, '18:30:00', '05:00:00', 11000),
+(26, 27, 25, '13:00:00', '02:30:00', 12000),
+(27, 30, 29, '05:30:00', '18:30:00', 11000),
+(28, 30, 25, '16:00:00', '04:30:00', 12000),
+(29, 30, 29, '12:30:00', '01:30:00', 11000),
+(30, 31, 28, '08:00:00', '13:30:00', 5000),
+(31, 31, 26, '16:00:00', '21:30:00', 5000),
+(32, 31, 24, '14:30:00', '19:00:00', 5000);
 
 --
 -- Triggers `schedule`
 --
 DELIMITER $$
 CREATE TRIGGER `ticket_auto_generate` AFTER INSERT ON `schedule` FOR EACH ROW BEGIN
-DECLARE no_of_seat INT;
-DECLARE seat_count INT;
-SET seat_count = 1;
-SET no_of_seat = (SELECT bus.no_of_seat FROM bus WHERE bus.bus_id = NEW.bus_id);
-read_loop: LOOP
-    IF seat_count > no_of_seat THEN
-      LEAVE read_loop;
-    END IF;
-    INSERT INTO ticket (ticket.schedule_id,ticket.seat_no) VALUES (NEW.s_id, seat_count);
-    SET seat_count = seat_count + 1;
-  END LOOP;
+    DECLARE no_of_seat INT;
+    DECLARE seat_count INT;
+    SET seat_count = 1;
+    SET no_of_seat = (SELECT bus.no_of_seat FROM bus WHERE bus.bus_id = NEW.bus_id);
+    read_loop: LOOP
+        IF seat_count > no_of_seat THEN
+            LEAVE read_loop;
+        END IF;
+        INSERT INTO ticket (ticket.schedule_id,ticket.seat_no) VALUES (NEW.s_id, seat_count);
+        SET seat_count = seat_count + 1;
+    END LOOP;
 END
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+                         `id` bigint(20) NOT NULL,
+                         `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+                         `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+                         `role` enum('admin','standard','operator','') COLLATE utf8_unicode_ci NOT NULL,
+                         `operator_id` bigint(20) DEFAULT NULL,
+                         `staff_id` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -366,9 +363,9 @@ DELIMITER ;
 --
 
 CREATE TABLE `ticket` (
-  `t_id` bigint(20) NOT NULL,
-  `schedule_id` bigint(20) NOT NULL,
-  `seat_no` int(11) NOT NULL
+                          `t_id` bigint(20) NOT NULL,
+                          `schedule_id` bigint(20) NOT NULL,
+                          `seat_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -376,242 +373,312 @@ CREATE TABLE `ticket` (
 --
 
 INSERT INTO `ticket` (`t_id`, `schedule_id`, `seat_no`) VALUES
-(1, 12, 1),
-(2, 12, 2),
-(3, 12, 3),
-(4, 12, 4),
-(5, 12, 5),
-(6, 12, 6),
-(7, 12, 7),
-(8, 12, 8),
-(9, 12, 9),
-(10, 12, 10),
-(11, 12, 11),
-(12, 12, 12),
-(13, 12, 13),
-(14, 12, 14),
-(15, 12, 15),
-(16, 12, 16),
-(17, 12, 17),
-(18, 12, 18),
-(19, 12, 19),
-(20, 12, 20),
-(21, 12, 21),
-(22, 12, 22),
-(23, 12, 23),
-(24, 12, 24),
-(25, 12, 25),
-(26, 12, 26),
-(27, 12, 27),
-(28, 12, 28),
-(29, 12, 29),
-(30, 12, 30),
-(31, 12, 31),
-(32, 12, 32),
-(33, 13, 1),
-(34, 13, 2),
-(35, 13, 3),
-(36, 13, 4),
-(37, 13, 5),
-(38, 13, 6),
-(39, 13, 7),
-(40, 13, 8),
-(41, 13, 9),
-(42, 13, 10),
-(43, 13, 11),
-(44, 13, 12),
-(45, 13, 13),
-(46, 13, 14),
-(47, 13, 15),
-(48, 13, 16),
-(49, 13, 17),
-(50, 13, 18),
-(51, 13, 19),
-(52, 13, 20),
-(53, 13, 21),
-(54, 13, 22),
-(55, 13, 23),
-(56, 13, 24),
-(57, 13, 25),
-(58, 13, 26),
-(59, 13, 27),
-(60, 13, 28),
-(61, 13, 29),
-(62, 13, 30),
-(63, 13, 31),
-(64, 13, 32),
-(65, 14, 1),
-(66, 14, 2),
-(67, 14, 3),
-(68, 14, 4),
-(69, 14, 5),
-(70, 14, 6),
-(71, 14, 7),
-(72, 14, 8),
-(73, 14, 9),
-(74, 14, 10),
-(75, 14, 11),
-(76, 14, 12),
-(77, 14, 13),
-(78, 14, 14),
-(79, 14, 15),
-(80, 14, 16),
-(81, 14, 17),
-(82, 14, 18),
-(83, 14, 19),
-(84, 14, 20),
-(85, 14, 21),
-(86, 14, 22),
-(87, 14, 23),
-(88, 14, 24),
-(89, 14, 25),
-(90, 14, 26),
-(91, 14, 27),
-(92, 14, 28),
-(93, 14, 29),
-(94, 14, 30),
-(95, 14, 31),
-(96, 14, 32),
-(97, 14, 33),
-(98, 14, 34),
-(99, 14, 35),
-(100, 14, 36),
-(101, 14, 37),
-(102, 14, 38),
-(103, 14, 39),
-(104, 14, 40),
-(105, 14, 41),
-(106, 14, 42),
-(107, 14, 43),
-(108, 14, 44),
-(109, 14, 45),
-(110, 14, 46),
-(111, 14, 47),
-(112, 14, 48),
-(113, 14, 49),
-(114, 14, 50),
-(115, 14, 51),
-(116, 14, 52),
-(117, 15, 1),
-(118, 15, 2),
-(119, 15, 3),
-(120, 15, 4),
-(121, 15, 5),
-(122, 15, 6),
-(123, 15, 7),
-(124, 15, 8),
-(125, 15, 9),
-(126, 15, 10),
-(127, 15, 11),
-(128, 15, 12),
-(129, 16, 1),
-(130, 16, 2),
-(131, 16, 3),
-(132, 16, 4),
-(133, 16, 5),
-(134, 16, 6),
-(135, 16, 7),
-(136, 16, 8),
-(137, 16, 9),
-(138, 16, 10),
-(139, 16, 11),
-(140, 16, 12),
-(141, 16, 13),
-(142, 16, 14),
-(143, 16, 15),
-(144, 16, 16),
-(145, 17, 1),
-(146, 17, 2),
-(147, 17, 3),
-(148, 17, 4),
-(149, 17, 5),
-(150, 17, 6),
-(151, 17, 7),
-(152, 17, 8),
-(153, 17, 9),
-(154, 17, 10),
-(155, 17, 11),
-(156, 17, 12),
-(157, 17, 13),
-(158, 17, 14),
-(159, 17, 15),
-(160, 17, 16),
-(161, 17, 17),
-(162, 17, 18),
-(163, 17, 19),
-(164, 17, 20),
-(165, 17, 21),
-(166, 17, 22),
-(167, 17, 23),
-(168, 17, 24),
-(169, 18, 1),
-(170, 18, 2),
-(171, 18, 3),
-(172, 18, 4),
-(173, 18, 5),
-(174, 18, 6),
-(175, 18, 7),
-(176, 18, 8),
-(177, 18, 9),
-(178, 18, 10),
-(179, 18, 11),
-(180, 18, 12),
-(181, 18, 13),
-(182, 18, 14),
-(183, 18, 15),
-(184, 18, 16),
-(185, 18, 17),
-(186, 18, 18),
-(187, 18, 19),
-(188, 18, 20),
-(189, 18, 21),
-(190, 18, 22),
-(191, 18, 23),
-(192, 18, 24),
-(193, 18, 25),
-(194, 18, 26),
-(195, 18, 27),
-(196, 18, 28),
-(197, 18, 29),
-(198, 18, 30),
-(199, 18, 31),
-(200, 18, 32),
-(201, 18, 33),
-(202, 18, 34),
-(203, 18, 35),
-(204, 18, 36),
-(205, 18, 37),
-(206, 18, 38),
-(207, 18, 39),
-(208, 18, 40),
-(209, 18, 41),
-(210, 18, 42),
-(211, 18, 43),
-(212, 18, 44),
-(213, 19, 1),
-(214, 19, 2),
-(215, 19, 3),
-(216, 19, 4),
-(217, 19, 5),
-(218, 19, 6),
-(219, 19, 7),
-(220, 19, 8),
-(221, 19, 9),
-(222, 19, 10),
-(223, 19, 11),
-(224, 19, 12),
-(225, 19, 13),
-(226, 19, 14),
-(227, 19, 15),
-(228, 19, 16),
-(229, 19, 17),
-(230, 19, 18),
-(231, 19, 19),
-(232, 19, 20),
-(233, 19, 21),
-(234, 19, 22),
-(235, 19, 23),
-(236, 19, 24);
+(416, 24, 1),
+(417, 24, 2),
+(418, 24, 3),
+(419, 24, 4),
+(420, 24, 5),
+(421, 24, 6),
+(422, 24, 7),
+(423, 24, 8),
+(424, 24, 9),
+(425, 24, 10),
+(426, 24, 11),
+(427, 24, 12),
+(428, 24, 13),
+(429, 24, 14),
+(430, 24, 15),
+(431, 24, 16),
+(432, 24, 17),
+(433, 24, 18),
+(434, 24, 19),
+(435, 24, 20),
+(436, 24, 21),
+(437, 24, 22),
+(438, 24, 23),
+(439, 24, 24),
+(440, 24, 25),
+(441, 24, 26),
+(442, 24, 27),
+(443, 24, 28),
+(444, 24, 29),
+(445, 24, 30),
+(446, 24, 31),
+(447, 24, 32),
+(448, 24, 33),
+(449, 24, 34),
+(450, 24, 35),
+(451, 24, 36),
+(452, 24, 37),
+(453, 24, 38),
+(454, 24, 39),
+(455, 24, 40),
+(456, 24, 41),
+(457, 24, 42),
+(458, 24, 43),
+(459, 24, 44),
+(460, 24, 45),
+(461, 25, 1),
+(462, 25, 2),
+(463, 25, 3),
+(464, 25, 4),
+(465, 25, 5),
+(466, 25, 6),
+(467, 25, 7),
+(468, 25, 8),
+(469, 25, 9),
+(470, 25, 10),
+(471, 25, 11),
+(472, 25, 12),
+(473, 25, 13),
+(474, 25, 14),
+(475, 25, 15),
+(476, 25, 16),
+(477, 25, 17),
+(478, 25, 18),
+(479, 25, 19),
+(480, 25, 20),
+(481, 25, 21),
+(482, 25, 22),
+(483, 25, 23),
+(484, 25, 24),
+(485, 25, 25),
+(486, 25, 26),
+(487, 25, 27),
+(488, 25, 28),
+(489, 25, 29),
+(490, 25, 30),
+(491, 25, 31),
+(492, 25, 32),
+(493, 25, 33),
+(494, 25, 34),
+(495, 25, 35),
+(496, 25, 36),
+(497, 25, 37),
+(498, 25, 38),
+(499, 25, 39),
+(500, 25, 40),
+(501, 25, 41),
+(502, 25, 42),
+(503, 25, 43),
+(504, 25, 44),
+(505, 25, 45),
+(506, 26, 1),
+(507, 26, 2),
+(508, 26, 3),
+(509, 26, 4),
+(510, 26, 5),
+(511, 26, 6),
+(512, 26, 7),
+(513, 26, 8),
+(514, 26, 9),
+(515, 26, 10),
+(516, 26, 11),
+(517, 26, 12),
+(518, 26, 13),
+(519, 26, 14),
+(520, 26, 15),
+(521, 26, 16),
+(522, 26, 17),
+(523, 26, 18),
+(524, 26, 19),
+(525, 26, 20),
+(526, 26, 21),
+(527, 26, 22),
+(528, 26, 23),
+(529, 26, 24),
+(530, 26, 25),
+(531, 26, 26),
+(532, 26, 27),
+(533, 26, 28),
+(534, 26, 29),
+(535, 26, 30),
+(536, 26, 31),
+(537, 26, 32),
+(538, 26, 33),
+(539, 26, 34),
+(540, 26, 35),
+(541, 26, 36),
+(542, 26, 37),
+(543, 26, 38),
+(544, 26, 39),
+(545, 26, 40),
+(546, 26, 41),
+(547, 26, 42),
+(548, 26, 43),
+(549, 26, 44),
+(550, 27, 1),
+(551, 27, 2),
+(552, 27, 3),
+(553, 27, 4),
+(554, 27, 5),
+(555, 27, 6),
+(556, 27, 7),
+(557, 27, 8),
+(558, 27, 9),
+(559, 27, 10),
+(560, 27, 11),
+(561, 27, 12),
+(562, 27, 13),
+(563, 27, 14),
+(564, 27, 15),
+(565, 27, 16),
+(566, 27, 17),
+(567, 27, 18),
+(568, 27, 19),
+(569, 27, 20),
+(570, 27, 21),
+(571, 27, 22),
+(572, 27, 23),
+(573, 27, 24),
+(574, 27, 25),
+(575, 27, 26),
+(576, 27, 27),
+(577, 27, 28),
+(578, 27, 29),
+(579, 27, 30),
+(580, 27, 31),
+(581, 27, 32),
+(582, 27, 33),
+(583, 27, 34),
+(584, 27, 35),
+(585, 27, 36),
+(586, 28, 1),
+(587, 28, 2),
+(588, 28, 3),
+(589, 28, 4),
+(590, 28, 5),
+(591, 28, 6),
+(592, 28, 7),
+(593, 28, 8),
+(594, 28, 9),
+(595, 28, 10),
+(596, 28, 11),
+(597, 28, 12),
+(598, 28, 13),
+(599, 28, 14),
+(600, 28, 15),
+(601, 28, 16),
+(602, 28, 17),
+(603, 28, 18),
+(604, 28, 19),
+(605, 28, 20),
+(606, 28, 21),
+(607, 28, 22),
+(608, 28, 23),
+(609, 28, 24),
+(610, 28, 25),
+(611, 28, 26),
+(612, 28, 27),
+(613, 28, 28),
+(614, 28, 29),
+(615, 28, 30),
+(616, 28, 31),
+(617, 28, 32),
+(618, 28, 33),
+(619, 28, 34),
+(620, 28, 35),
+(621, 28, 36),
+(622, 28, 37),
+(623, 28, 38),
+(624, 28, 39),
+(625, 28, 40),
+(626, 28, 41),
+(627, 28, 42),
+(628, 28, 43),
+(629, 28, 44),
+(630, 29, 1),
+(631, 29, 2),
+(632, 29, 3),
+(633, 29, 4),
+(634, 29, 5),
+(635, 29, 6),
+(636, 29, 7),
+(637, 29, 8),
+(638, 29, 9),
+(639, 29, 10),
+(640, 29, 11),
+(641, 29, 12),
+(642, 29, 13),
+(643, 29, 14),
+(644, 29, 15),
+(645, 29, 16),
+(646, 29, 17),
+(647, 29, 18),
+(648, 29, 19),
+(649, 29, 20),
+(650, 29, 21),
+(651, 29, 22),
+(652, 29, 23),
+(653, 29, 24),
+(654, 29, 25),
+(655, 29, 26),
+(656, 29, 27),
+(657, 29, 28),
+(658, 29, 29),
+(659, 29, 30),
+(660, 29, 31),
+(661, 29, 32),
+(662, 29, 33),
+(663, 29, 34),
+(664, 29, 35),
+(665, 29, 36),
+(666, 30, 1),
+(667, 30, 2),
+(668, 30, 3),
+(669, 30, 4),
+(670, 30, 5),
+(671, 30, 6),
+(672, 30, 7),
+(673, 30, 8),
+(674, 30, 9),
+(675, 30, 10),
+(676, 30, 11),
+(677, 30, 12),
+(678, 31, 1),
+(679, 31, 2),
+(680, 31, 3),
+(681, 31, 4),
+(682, 31, 5),
+(683, 31, 6),
+(684, 31, 7),
+(685, 31, 8),
+(686, 31, 9),
+(687, 31, 10),
+(688, 31, 11),
+(689, 31, 12),
+(690, 31, 13),
+(691, 31, 14),
+(692, 31, 15),
+(693, 31, 16),
+(694, 31, 17),
+(695, 31, 18),
+(696, 31, 19),
+(697, 31, 20),
+(698, 31, 21),
+(699, 31, 22),
+(700, 31, 23),
+(701, 31, 24),
+(702, 31, 25),
+(703, 31, 26),
+(704, 31, 27),
+(705, 31, 28),
+(706, 32, 1),
+(707, 32, 2),
+(708, 32, 3),
+(709, 32, 4),
+(710, 32, 5),
+(711, 32, 6),
+(712, 32, 7),
+(713, 32, 8),
+(714, 32, 9),
+(715, 32, 10),
+(716, 32, 11),
+(717, 32, 12),
+(718, 32, 13),
+(719, 32, 14),
+(720, 32, 15),
+(721, 32, 16);
 
 -- --------------------------------------------------------
 
@@ -620,9 +687,9 @@ INSERT INTO `ticket` (`t_id`, `schedule_id`, `seat_no`) VALUES
 --
 
 CREATE TABLE `ticket_seat` (
-  `ticket_id` bigint(20) NOT NULL,
-  `departure_date` date NOT NULL,
-  `create_date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                               `ticket_id` bigint(20) NOT NULL,
+                               `departure_date` date NOT NULL,
+                               `create_date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -632,11 +699,11 @@ CREATE TABLE `ticket_seat` (
 --
 
 CREATE TABLE `traveller` (
-  `traveller_id` bigint(20) NOT NULL,
-  `traveller_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `gender_id` int(20) NOT NULL,
-  `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `phone_no` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+                             `traveller_id` bigint(20) NOT NULL,
+                             `traveller_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                             `gender_id` int(20) NOT NULL,
+                             `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+                             `phone_no` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -666,7 +733,17 @@ INSERT INTO `traveller` (`traveller_id`, `traveller_name`, `gender_id`, `email`,
 (30, '22', 5, 'kyaw@gmail.com', '09432432423'),
 (31, '22', 3, 'fdfdsf@fsef', '09432432423'),
 (32, '22', 4, 'kyaw@gmail.com', '222'),
-(33, 'fdf', 3, 'kyaw@gmail.com', 'dfd');
+(33, 'fdf', 3, 'kyaw@gmail.com', 'dfd'),
+(34, 'gfdgfdg', 4, 'kyaw@gmail.com', 'fsdfs'),
+(35, 'Kyaw Thi Ha', 3, 'kyawthi547@gmail.com', '09778673750'),
+(36, 'HELLO', 3, 'fdfsdfsd@gmaico', '09432432423'),
+(37, 'Kyaw', 1, 'kyaw@gmail.com', '89478934'),
+(38, 'dhtyky', 3, 'fjiho@gmail.com', '0987468570'),
+(39, 'hlbhi', 5, 'vhulo@gmail.com', '0999786865'),
+(40, 'erg;sp', 4, 'gy@gmail.com', '90457606768'),
+(41, 'rhbwoyh', 4, 'geu@gmail.com', '9846565768'),
+(42, 'fuyui', 4, 'ghj@gmail.com', '099788677678'),
+(43, 'fyuoi', 4, 'tfyi@gmail.com', '786573555347');
 
 -- --------------------------------------------------------
 
@@ -675,9 +752,9 @@ INSERT INTO `traveller` (`traveller_id`, `traveller_name`, `gender_id`, `email`,
 --
 
 CREATE TABLE `traveller_gender` (
-  `g_id` int(11) NOT NULL,
-  `g_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `group_status` tinyint(1) NOT NULL
+                                    `g_id` int(11) NOT NULL,
+                                    `g_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                                    `group_status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -699,86 +776,98 @@ INSERT INTO `traveller_gender` (`g_id`, `g_name`, `group_status`) VALUES
 -- Indexes for table `booking`
 --
 ALTER TABLE `booking`
-  ADD PRIMARY KEY (`booking_id`),
-  ADD KEY `booking_traveller_id` (`traveller_id`);
+    ADD PRIMARY KEY (`booking_id`),
+    ADD KEY `booking_traveller_id` (`traveller_id`);
 
 --
 -- Indexes for table `booking_detail`
 --
 ALTER TABLE `booking_detail`
-  ADD PRIMARY KEY (`bd_id`),
-  ADD UNIQUE KEY `ticket_id` (`ticket_id`,`departure_date`),
-  ADD KEY `booking_detail_booking_id` (`booking_id`);
+    ADD PRIMARY KEY (`bd_id`),
+    ADD UNIQUE KEY `ticket_id` (`ticket_id`,`departure_date`),
+    ADD KEY `booking_detail_booking_id` (`booking_id`);
 
 --
 -- Indexes for table `booking_status`
 --
 ALTER TABLE `booking_status`
-  ADD PRIMARY KEY (`bs_id`);
+    ADD PRIMARY KEY (`bs_id`);
 
 --
 -- Indexes for table `bus`
 --
 ALTER TABLE `bus`
-  ADD PRIMARY KEY (`bus_id`);
+    ADD PRIMARY KEY (`bus_id`),
+    ADD KEY `bus_bus_operator_id` (`bus_operator_id`);
 
 --
 -- Indexes for table `bus_operator`
 --
 ALTER TABLE `bus_operator`
-  ADD PRIMARY KEY (`bus_operator_id`);
+    ADD PRIMARY KEY (`bus_operator_id`);
 
 --
 -- Indexes for table `city`
 --
 ALTER TABLE `city`
-  ADD PRIMARY KEY (`c_id`);
+    ADD PRIMARY KEY (`c_id`);
 
 --
 -- Indexes for table `route`
 --
 ALTER TABLE `route`
-  ADD PRIMARY KEY (`r_id`);
+    ADD PRIMARY KEY (`r_id`);
 
 --
 -- Indexes for table `route_detail`
 --
 ALTER TABLE `route_detail`
-  ADD UNIQUE KEY `route_id` (`route_id`,`location`,`city_id`),
-  ADD KEY `city_id` (`city_id`);
+    ADD UNIQUE KEY `route_id` (`route_id`,`location`,`city_id`),
+    ADD KEY `city_id` (`city_id`);
 
 --
 -- Indexes for table `schedule`
 --
 ALTER TABLE `schedule`
-  ADD PRIMARY KEY (`s_id`);
+    ADD PRIMARY KEY (`s_id`),
+    ADD KEY `schedule_route_id` (`route_id`),
+    ADD KEY `schedule_bus_id` (`bus_id`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+    ADD PRIMARY KEY (`id`),
+    ADD UNIQUE KEY `name` (`name`),
+    ADD KEY `staff_operator_id` (`operator_id`),
+    ADD KEY `staff_staff_id` (`staff_id`);
 
 --
 -- Indexes for table `ticket`
 --
 ALTER TABLE `ticket`
-  ADD PRIMARY KEY (`t_id`),
-  ADD KEY `schedule_id` (`schedule_id`);
+    ADD PRIMARY KEY (`t_id`),
+    ADD KEY `schedule_id` (`schedule_id`);
 
 --
 -- Indexes for table `ticket_seat`
 --
 ALTER TABLE `ticket_seat`
-  ADD UNIQUE KEY `ticket_id` (`ticket_id`,`departure_date`),
-  ADD KEY `departure_date` (`departure_date`);
+    ADD UNIQUE KEY `ticket_id` (`ticket_id`,`departure_date`),
+    ADD KEY `departure_date` (`departure_date`);
 
 --
 -- Indexes for table `traveller`
 --
 ALTER TABLE `traveller`
-  ADD PRIMARY KEY (`traveller_id`),
-  ADD KEY `traveller_gender_id` (`gender_id`);
+    ADD PRIMARY KEY (`traveller_id`),
+    ADD KEY `traveller_gender_id` (`gender_id`);
 
 --
 -- Indexes for table `traveller_gender`
 --
 ALTER TABLE `traveller_gender`
-  ADD PRIMARY KEY (`g_id`);
+    ADD PRIMARY KEY (`g_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -788,67 +877,73 @@ ALTER TABLE `traveller_gender`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    MODIFY `booking_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `booking_detail`
 --
 ALTER TABLE `booking_detail`
-  MODIFY `bd_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+    MODIFY `bd_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `booking_status`
 --
 ALTER TABLE `booking_status`
-  MODIFY `bs_id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `bs_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bus`
 --
 ALTER TABLE `bus`
-  MODIFY `bus_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+    MODIFY `bus_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `bus_operator`
 --
 ALTER TABLE `bus_operator`
-  MODIFY `bus_operator_id` bigint(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+    MODIFY `bus_operator_id` bigint(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `city`
 --
 ALTER TABLE `city`
-  MODIFY `c_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+    MODIFY `c_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
-  MODIFY `r_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+    MODIFY `r_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `s_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+    MODIFY `s_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+    MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ticket`
 --
 ALTER TABLE `ticket`
-  MODIFY `t_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+    MODIFY `t_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=722;
 
 --
 -- AUTO_INCREMENT for table `traveller`
 --
 ALTER TABLE `traveller`
-  MODIFY `traveller_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+    MODIFY `traveller_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `traveller_gender`
 --
 ALTER TABLE `traveller_gender`
-  MODIFY `g_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+    MODIFY `g_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
@@ -858,26 +953,59 @@ ALTER TABLE `traveller_gender`
 -- Constraints for table `booking`
 --
 ALTER TABLE `booking`
-  ADD CONSTRAINT `booking_traveller_id` FOREIGN KEY (`traveller_id`) REFERENCES `traveller` (`traveller_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `booking_traveller_id` FOREIGN KEY (`traveller_id`) REFERENCES `traveller` (`traveller_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `booking_detail`
 --
 ALTER TABLE `booking_detail`
-  ADD CONSTRAINT `booking_detail_booking_id` FOREIGN KEY (`booking_id`) REFERENCES `booking` (`booking_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `booking_detail_ticket_id` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`t_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `booking_detail_booking_id` FOREIGN KEY (`booking_id`) REFERENCES `booking` (`booking_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `booking_detail_ticket_id` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`t_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `bus`
+--
+ALTER TABLE `bus`
+    ADD CONSTRAINT `bus_bus_operator_id` FOREIGN KEY (`bus_operator_id`) REFERENCES `bus_operator` (`bus_operator_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `route_detail`
+--
+ALTER TABLE `route_detail`
+    ADD CONSTRAINT `route_detail_city_id` FOREIGN KEY (`city_id`) REFERENCES `city` (`c_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `route_detail_route_id` FOREIGN KEY (`route_id`) REFERENCES `route` (`r_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `schedule`
+--
+ALTER TABLE `schedule`
+    ADD CONSTRAINT `schedule_bus_id` FOREIGN KEY (`bus_id`) REFERENCES `bus` (`bus_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `schedule_route_id` FOREIGN KEY (`route_id`) REFERENCES `route` (`r_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `staff`
+--
+ALTER TABLE `staff`
+    ADD CONSTRAINT `staff_operator_id` FOREIGN KEY (`operator_id`) REFERENCES `bus_operator` (`bus_operator_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `staff_staff_id` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`id`);
+
+--
+-- Constraints for table `ticket`
+--
+ALTER TABLE `ticket`
+    ADD CONSTRAINT `ticket_schedule_id` FOREIGN KEY (`schedule_id`) REFERENCES `schedule` (`s_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `ticket_seat`
 --
 ALTER TABLE `ticket_seat`
-  ADD CONSTRAINT `ticket_seat_ticket_id` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`t_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `ticket_seat_ticket_id` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`t_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `traveller`
 --
 ALTER TABLE `traveller`
-  ADD CONSTRAINT `traveller_gender_id` FOREIGN KEY (`gender_id`) REFERENCES `traveller_gender` (`g_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `traveller_gender_id` FOREIGN KEY (`gender_id`) REFERENCES `traveller_gender` (`g_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

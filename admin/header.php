@@ -12,6 +12,8 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.css"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.date.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/http_ticket/admin/css/css/adminlte.min.css">
@@ -30,10 +32,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="/http_ticket/admin/dashboard.php" class="nav-link">Home</a>
             </li>
         </ul>
 
@@ -55,7 +54,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="/http_ticket/admin/dashboard.php" class="nav-link">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
@@ -64,7 +63,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/booking/booking_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-ticket"></i>
                         <p>
                             Booking
                         </p>
@@ -72,7 +71,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/schedule/schedule_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-clock-o"></i>
                         <p>
                             Schedule
                         </p>
@@ -80,7 +79,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/bus_operator/bus_operator_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-support"></i>
                         <p>
 
                             Bus Operator
@@ -97,7 +96,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/city/city_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fas fa-city"></i>
                         <p>
                             City
                         </p>
@@ -105,7 +104,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/bus_route/route_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-map"></i>
                         <p>
                             Route
                         </p>
@@ -124,7 +123,7 @@
                 ?>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/setting/staff_list.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-user"></i>
                         <p>
                             Staff
                         </p>
@@ -133,7 +132,7 @@
                 <?php endif; ?>
                 <li class="nav-item">
                     <a href="/http_ticket/admin/auth/log_out.php" class="nav-link">
-                        <i class="nav-icon fa fa-bus"></i>
+                        <i class="nav-icon fa fa-sign-out"></i>
                         <p>
                             Log Out
                         </p>
