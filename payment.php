@@ -34,7 +34,7 @@ require_once "header.php";
                     <div class="card">
                         <div class="card-body">
                             <h1 class="card-title">Please go to HOME</h1>
-                            <a class="btn btn-primary" href="/http_ticket/">HOME</a>
+                            <a class="btn btn-primary" href="/">HOME</a>
                         </div>
                     </div>
                 </div>

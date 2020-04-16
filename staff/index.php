@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['staff_auth'],$_SESSION['staff_staff'])) {
-    header("location: /http_ticket/staff/select_schedule.php");
+    header("location: /staff/select_schedule.php");
     exit();
 }
 ?>

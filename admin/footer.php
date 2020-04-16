@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.date.js"></script>
-<script src="/http_ticket/js/adminlte.min.js"></script>
+<script src="js/adminlte.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#admin_data_table').DataTable();

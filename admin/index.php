@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['auth'])) {
-    header("location: /http_ticket/admin/schedule/schedule_list.php");
+    header("location: /admin/schedule/schedule_list.php");
     exit();
 }
 ?>
@@ -27,7 +27,7 @@ if(isset($_SESSION['auth'])) {
                         <div class="card-body">
                             <h4 class="card-title text-center"><img src="https://img.icons8.com/bubbles/50/000000/bus.png" class="rounded text-center" alt="Cinque Terre"></h4>
                             <h4 class="card-title text-center">Admin</h4>
-                            <form action="auth/login.php" method="post">
+                            <form action="/admin/auth/login.php" method="post">
                                 <?php
                                 if(isset($_SESSION['auth_fail'])):
                                     unset($_SESSION['auth_fail']);

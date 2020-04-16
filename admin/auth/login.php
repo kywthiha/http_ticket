@@ -8,10 +8,10 @@ $result = mysqli_query($conn, $sql);
 if ($row = mysqli_fetch_assoc($result)) {
     $_SESSION['auth'] = true;
     $_SESSION['staff'] = $row;
-    header("location: /http_ticket/admin/schedule/schedule_list.php");
+    header("location: /admin/schedule/schedule_list.php");
 } else {
     $_SESSION['auth_fail'] = true;
-    header("location: /http_ticket/admin/index.php");
+    header("location: /admin/index.php");
 }
 
 ?>

@@ -15,7 +15,7 @@ require_once "header.php";
                                 Booking Complete
                             </div>
                             <h3 class="card-title">Please go to HOME</h3>
-                            <a class="btn btn-primary" href="/http_ticket/staff/">HOME</a>
+                            <a class="btn btn-primary" href="/staff/">HOME</a>
                         </div>
                     </div>
                 </div>

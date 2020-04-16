@@ -10,10 +10,10 @@ if ($row = mysqli_fetch_assoc($result)) {
     $sql = "UPDATE staff SET password ='$new_password' WHERE name='$name' AND password='$old_password'";
     $result = mysqli_query($conn, $sql);
     $_SESSION['password_change'] = 1;
-    header("location: /http_ticket/admin/auth/log_out.php");
+    header("location: /admin/auth/log_out.php");
 } else {
     $_SESSION['password_change'] = 2;
-    header("location: /http_ticket/admin/setting/account.php");
+    header("location: /admin/setting/account.php");
 }
 
 ?>

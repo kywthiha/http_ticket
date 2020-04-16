@@ -9,7 +9,7 @@ if ($row = mysqli_fetch_assoc($result)) {
     if ($row['role'] == "operator"){
         $_SESSION['staff_auth'] = true;
         $_SESSION['staff_staff'] = $row;
-        header("location: /http_ticket/staff/select_schedule.php");
+        header("location: /staff/select_schedule.php");
     }
     else{
         die("Un authorize access");
@@ -17,7 +17,7 @@ if ($row = mysqli_fetch_assoc($result)) {
 
 } else {
     $_SESSION['staff_auth_fail'] = true;
-    header("location: /http_ticket/staff/index.php");
+    header("location: /staff/index.php");
 }
 
 ?>

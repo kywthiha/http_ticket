@@ -16,7 +16,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.date.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/http_ticket/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title><?php echo $title ?></title>
 </head>
 <body>
@@ -31,13 +31,13 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/http_ticket/staff">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/staff">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/http_ticket/staff/booking_list.php">Booking List </a>
+                <a class="nav-link" href="/staff/booking_list.php">Booking List </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/http_ticket/staff/auth/log_out.php">Log Out </a>
+                <a class="nav-link" href="/staff/auth/log_out.php">Log Out </a>
             </li>
         </ul>
     </div>

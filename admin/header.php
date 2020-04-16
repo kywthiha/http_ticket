@@ -16,7 +16,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="/http_ticket/admin/css/css/adminlte.min.css">
+    <link rel="stylesheet" href="/admin/css/css/adminlte.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
@@ -32,7 +32,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="/http_ticket/admin/dashboard.php" class="nav-link">Home</a>
+                <a href="/admin/dashboard.php" class="nav-link">Home</a>
             </li>
         </ul>
 
@@ -42,7 +42,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="/http_ticket/admin/setting/account.php" class="brand-link">
+        <a href="/admin/setting/account.php" class="brand-link">
             <img src="https://img.icons8.com/bubbles/50/000000/bus.png" alt="Admin" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Admin</span>
@@ -54,7 +54,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/dashboard.php" class="nav-link">
+                    <a href="/admin/dashboard.php" class="nav-link">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/booking/booking_list.php" class="nav-link">
+                    <a href="/admin/booking/booking_list.php" class="nav-link">
                         <i class="nav-icon fa fa-ticket"></i>
                         <p>
                             Booking
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/schedule/schedule_list.php" class="nav-link">
+                    <a href="/admin/schedule/schedule_list.php" class="nav-link">
                         <i class="nav-icon fa fa-clock-o"></i>
                         <p>
                             Schedule
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/bus_operator/bus_operator_list.php" class="nav-link">
+                    <a href="/admin/bus_operator/bus_operator_list.php" class="nav-link">
                         <i class="nav-icon fa fa-support"></i>
                         <p>
 
@@ -87,7 +87,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/bus/bus_list.php" class="nav-link">
+                    <a href="/admin/bus/bus_list.php" class="nav-link">
                         <i class="nav-icon fa fa-bus"></i>
                         <p>
                             Bus
@@ -95,7 +95,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/city/city_list.php" class="nav-link">
+                    <a href="/admin/city/city_list.php" class="nav-link">
                         <i class="nav-icon fas fa-city"></i>
                         <p>
                             City
@@ -103,7 +103,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/bus_route/route_list.php" class="nav-link">
+                    <a href="/admin/bus_route/route_list.php" class="nav-link">
                         <i class="nav-icon fa fa-map"></i>
                         <p>
                             Route
@@ -122,7 +122,7 @@
                 if(getAdmin() == "admin"):
                 ?>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/setting/staff_list.php" class="nav-link">
+                    <a href="/admin/setting/staff_list.php" class="nav-link">
                         <i class="nav-icon fa fa-user"></i>
                         <p>
                             Staff
@@ -131,7 +131,7 @@
                 </li>
                 <?php endif; ?>
                 <li class="nav-item">
-                    <a href="/http_ticket/admin/auth/log_out.php" class="nav-link">
+                    <a href="/admin/auth/log_out.php" class="nav-link">
                         <i class="nav-icon fa fa-sign-out"></i>
                         <p>
                             Log Out
