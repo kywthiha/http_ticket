@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7201347a-bef1-495f-8ca2-c5a918b2d393" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/http_ticket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/http_ticket.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/auth/log_out.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/auth/log_out.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/auth/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/auth/password_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/auth/password_change.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/configs/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/configs/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/configs/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/configs/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_trip.php" beforeDir="false" afterPath="$PROJECT_DIR$/search_trip.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/auth/log_out.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/auth/log_out.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/auth/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/auth/staff_role_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/auth/staff_role_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/staff_booking_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/staff_booking_success.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +119,7 @@
       <workItem from="1580399096648" duration="1826000" />
       <workItem from="1580435238679" duration="1019000" />
       <workItem from="1580501841382" duration="873000" />
-      <workItem from="1587050750872" duration="4976000" />
+      <workItem from="1587050750872" duration="5944000" />
     </task>
     <task id="LOCAL-00001" summary="Seat list Ok">
       <created>1580005337789</created>
@@ -182,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580400569003</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Project Show Ready State Not Complete">
+      <created>1587059676858</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587059676858</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,10 +206,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580151707948" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1580400567773">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1587059672070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580400567773" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587059672070" />
     <state x="499" y="153" key="FileChooserDialogImpl" timestamp="1587050835481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -254,10 +242,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580130140809" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1580400674470">
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1587059686447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580400674470" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587059686447" />
     <state x="386" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579928122103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
