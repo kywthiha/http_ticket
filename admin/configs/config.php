@@ -7,10 +7,10 @@ if ($host == 'localhost'){
     $dbpass = "";
     $dbname = "http_ticket";
 }else{
-    $dbhost = "remotemysql.com";
-    $dbuser = "bVcxl6XI8h";
-    $dbpass = "uNO1STdL2R";
-    $dbname = "bVcxl6XI8h";
+    $dbhost = "us-cdbr-east-06.cleardb.net";
+    $dbuser = "bee42795583571";
+    $dbpass = "4d4a9329";
+    $dbname = "heroku_fb92eaed269e5d9";
 }
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
